@@ -61,3 +61,26 @@ function isComment(token) {
   return token && (token.type === 'LineComment' || token.type === 'BlockComment');
 }
 
+
+exports.isOpeningBrace = isOpeningBrace;
+function isOpeningBrace(token) {
+  return token && (token.type === 'Punctuator' && token.value === '{');
+}
+
+
+exports.isClosingBrace = isClosingBrace;
+function isClosingBrace(token) {
+  return token && (token.type === 'Punctuator' && token.value === '}');
+}
+
+
+exports.isOpeningBracket = isOpeningBracket;
+function isOpeningBracket(token) {
+  return token && (token.type === 'Punctuator' && token.value === '[');
+}
+
+
+exports.isClosingBracket = isClosingBracket;
+function isClosingBracket(token) {
+  return token && (token.type === 'Punctuator' && token.value === ']');
+}
